@@ -1,2 +1,31 @@
-# pi_audio_looper
-A simple audio looper for the Raspberry Pi
+# Raspberry Pi Audio Looper
+
+A Bash Audio Looper for the Raspberry Pi and a Python3 shutdown button and LED indicator.
+
+This script should work with most versions of the Raspberry Pi. It was been extensively tested with the Pi 4 and Pi Zero 2 W.
+
+To install either clone this repo to a Raspberry Pi with wifi setup on it and run setup.sh as root, or run this command:
+
+```shell
+curl -L https://bit.ly/pi-aud-looper | sudo bash
+```
+
+N.B. It is generally not a good idea to pipe the output of a shortened URL straight into a root shell; but follow the link first and you will see it takes you to the setup.sh file and processes that for you!
+
+To setup the shutdown button and LED you will need to connect a push button and LED to your Raspberry Pi as shown in the diagram below.
+
+Once everything is installed you can plug a USB stick into your Raspberry Pi with a MP3 audio on it and then when you start the Pi up, it will auto mount the USB stick for you, scan it for MP3 files and play the last one it finds.
+
+To safely shut your Raspberry Pi down, press and hold the button for three seconds. You will then see the LED flash three times and your Pi will then safely shutdown. Just switch the power off and on again to restart your Audio Looper!
+
+Tested against Raspbain Buster Lite. It should also work with the full Raspbian Buster but it makes more sense to use the Lite version as you will no doubt want to run this headless... You can get the last release of Raspbian Buster from here: [https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/](https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/) Newer versions of Raspberry Pi OS will not work with this image as it uses OMXPlayer to play the audio, which was removed from Raspberry Pi OS with the release of the Bullseye version of the OS.
+
+If not running the `setup.sh` script, then the contents of `/etc/apt/sources.list` will need updating to match the following in order for your APT installs and updates to work:
+
+```shell
+deb http://legacy.raspbian.org/raspbian/ buster main contrib non-free rpi
+# Uncomment line below then 'apt-get update' to enable 'apt-get source'
+#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
+```
+
+![Wiring diagram for the button and LED for the python shutdown script](pythonShutdownWiring_bb.png)

@@ -1,0 +1,10 @@
+[Unit]
+Description=Pi Audio Looper
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/piAudLooper/piAudLooper.sh
+
+[Install]
+WantedBy=multi-user.target
