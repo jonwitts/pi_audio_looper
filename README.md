@@ -4,7 +4,7 @@ A Bash Audio Looper for the Raspberry Pi and a Python3 shutdown button and LED i
 
 This script should work with most versions of the Raspberry Pi. It was been extensively tested with the Pi 4 and Pi Zero 2 W.
 
-To install either clone this repo to a Raspberry Pi with wifi setup on it and run setup.sh as root, or run this command:
+To install either clone this repo to a Raspberry Pi with networking setup on it and run setup.sh as root, or run this command:
 
 ```shell
 curl -L https://bit.ly/pi-aud-looper | sudo bash
