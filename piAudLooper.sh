@@ -25,4 +25,4 @@ for file in /media/sda1/*.mp3 ; do
 done
 
 # now play the last audio file found, looping it with omxplayer
-omxplayer -b --loop --adev both "$filePlay"
+omxplayer -b --loop --adev local "$filePlay"

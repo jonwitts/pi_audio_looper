@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-# An Audio Looper for the Raspberry Pi 4
+# An Audio Looper for the Raspberry Pi
 #
 # author:  Jon Witts
 # license: GPL-3.0, see LICENSE included in this package
 #
-# A Bash Audio Looper for the Raspberry Pi 4
+# A Bash Audio Looper for the Raspberry Pi
 # and a Python3 shutdown button and LED indicator
 # https://github.com/jonwitts/pi_audio_looper
 

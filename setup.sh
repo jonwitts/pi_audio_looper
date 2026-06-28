@@ -32,25 +32,24 @@ echo "Install our piAudLooper script..."
 echo "=========================="
 mkdir /piAudLooper
 cd /piAudLooper
-wget -N https://raw.githubusercontent.com/jonwitts/pi_audio_looper/refs/heads/main/piAudLooper.sh
+wget -N https://raw.githubusercontent.com/jonwitts/pi_audio_looper/main/piAudLooper.sh
 chmod +x ./piAudLooper.sh
 
 # copy our shutdown Python script
 echo "Install our Python shutdown script..."
 echo "=========================="
-wget -N https://raw.githubusercontent.com/jonwitts/pi_audio_looper/refs/heads/main/pythonShutdown.py
+wget -N https://raw.githubusercontent.com/jonwitts/pi_audio_looper/main/pythonShutdown.py
 chmod +x ./pythonShutdown.py
 
 # copy and activate our systemd definitions
 echo "Copy and activate our systemd definitions..."
 echo "=========================="
 # piAudLooper service
-wget -N https://raw.githubusercontent.com/jonwitts/pi_audio_looper/refs/heads/main/piAudLooper.service
+wget -N https://raw.githubusercontent.com/jonwitts/pi_audio_looper/main/piAudLooper.service
 mv ./piAudLooper.service /lib/systemd/system/piAudLooper.service
 chmod 644 /lib/systemd/system/piAudLooper.service
-
 # pythonShutdown service
-wget -N https://raw.githubusercontent.com/jonwitts/pi_audio_looper/refs/heads/main/pythonShutdown.service
+wget -N https://raw.githubusercontent.com/jonwitts/pi_audio_looper/main/pythonShutdown.service
 mv ./pythonShutdown.service /lib/systemd/system/pythonShutdown.service
 chmod 644 /lib/systemd/system/pythonShutdown.service
 
