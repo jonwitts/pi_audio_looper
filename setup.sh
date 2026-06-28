@@ -25,7 +25,7 @@ apt update && apt dist-upgrade -y && apt autoremove -y
 # install our required packages
 echo "Installing dependencies..."
 echo "=========================="
-apt-get install git wget omxplayer util-linux python3 python3-gpiozero python3-pip exfat-fuse exfat-utils -y
+apt install git wget omxplayer util-linux python3 python3-gpiozero python3-pip exfat-fuse exfat-utils -y
 
 # copy our bash script
 echo "Install our piAudLooper script..."
